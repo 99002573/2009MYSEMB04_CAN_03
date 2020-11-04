@@ -203,55 +203,55 @@ on sysvar TRAFFIC_SIGNS::TrafficSignal
   }
 }
 
-on sysvar TRAFFIC_SIGNS::SchoolZone
+on sysvar TRAFFIC_SIGNS::SchoolZone                                   //system variable for School Zone
 {
-  if (button == 0x01)
+  if (button == 0x01)                                                  //if schoolzone button is pressed or not
   {
-    SetValues("School Zone. Speed Limit: 40 Km/hr", 40, 3, 0.5);
-    TempDistance = @ENGINE_CONTROL::Distance;
-    setTimer(delay,10);
+    SetValues("School Zone. Speed Limit: 40 Km/hr", 40, 3, 0.5);      //throws a warning to dashboard,reducing speed to 40km/hr,gear to 3,till distance to 0.5km 
+    TempDistance = @ENGINE_CONTROL::Distance;                         // read the current value of distance and store in 'TempDistance' variable
+    setTimer(delay,10);                                               //set a timer delay for 10milliseconds
+  } 
+  
+}
+
+on sysvar TRAFFIC_SIGNS::SpeedLimit50                                 //system variable for Speedlimit 50
+{
+  if (button == 0x01)                                                 //if Speedlimit50 button is pressed or not
+  {
+    SetValues("Speed Limit: 50 Km/hr", 50, 3, 1);                    //throws a warning to dashboard, reducing speed to 50km/hr,gear to 3 ,till distance to 1km 
+    TempDistance = @ENGINE_CONTROL::Distance;                        // read the current value of distance and store in 'TempDistance' variable
+    setTimer(delay,10);                                             //set a timer delay for 10 milliseconds
   }
   
 }
 
-on sysvar TRAFFIC_SIGNS::SpeedLimit50
-{
-  if (button == 0x01)
+on sysvar TRAFFIC_SIGNS::SpeedLimit100                            //system variable for Speedlimit 100
+{ 
+  if (button == 0x01)                                             //if Speedlimit100 button is pressed or not
   {
-    SetValues("Speed Limit: 50 Km/hr", 50, 3, 1);
-    TempDistance = @ENGINE_CONTROL::Distance;
-    setTimer(delay,10);
-  }
-  
-}
-
-on sysvar TRAFFIC_SIGNS::SpeedLimit100
-{
-  if (button == 0x01)
-  {
-    SetValues("Speed Limit: 100 Km/hr", 100, 4, 1.5);
-    TempDistance = @ENGINE_CONTROL::Distance;
-    setTimer(delay,10);
+    SetValues("Speed Limit: 100 Km/hr", 100, 4, 1.5);             //throws a warnig to dashboard,setting the speed limit to 100km/hr,gear to 4, till 1.5km distance
+    TempDistance = @ENGINE_CONTROL::Distance;                      //read the current value of distance and store in 'TempDistance' variable
+    setTimer(delay,10);                                           //set a timer delay for 10milliseconds
   }  
 }
 
-on sysvar TRAFFIC_SIGNS::Gravel
+on sysvar TRAFFIC_SIGNS::Gravel                                   //system variable for Gravel
 {
-  if (button == 0x01)
+  if (button == 0x01)                                             //if gravel button is pressed or not
   {
-    SetValues("Gravel Zone. Speed Limit: 10 Km/hr", 10, 1, 0.5);
-    TempDistance = @ENGINE_CONTROL::Distance;
-    setTimer(delay,10);
+    SetValues("Gravel Zone. Speed Limit: 10 Km/hr", 10, 1, 0.5);  //throws a waring to dashboard,reducing speed to 10km/hr,gear to 1,till 0.5km distance
+    TempDistance = @ENGINE_CONTROL::Distance;                      // read the current value of distance and store in 'TempDistance' variable
+    setTimer(delay,10);                                             //set a timer delay for 10milliseconds
   }  
 }
 
-on sysvar TRAFFIC_SIGNS::NarrowBridge
+on sysvar TRAFFIC_SIGNS::NarrowBridge                               //system variable for NarrowBridge
 {
-  if (button == 0x01)
+  if (button == 0x01)                                               //if NarrowBridge is pressed or not
   {
-    SetValues("Narrow Bridge Ahead", 30, 2, 1);
-    TempDistance = @ENGINE_CONTROL::Distance;
-    setTimer(delay,10);
+    SetValues("Narrow Bridge Ahead", 30, 2, 1);                     //throws a warning to dashboard,reducing speed to 30km/hr,gear to 2,till 1km distance
+    TempDistance = @ENGINE_CONTROL::Distance;                        //read the current value of distance and store in 'TempDistance variable
+    setTimer(delay,10);                                              //set a timer delay for 10milliseconds
   }  
 }
 
