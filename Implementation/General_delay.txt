@@ -1,0 +1,16 @@
+on timer delay
+{
+  setTimer(delay,1000);
+  if(@SpeedControl::Ignition>0)
+  {
+    if(button==1)
+    {
+      setTimer(delay,1000);
+      if(@SpeedControl::speed>=40)
+      {
+        @SpeedControl::speed-=20;
+        @SpeedControl::gear=3;    
+      }
+    }
+  }
+}
