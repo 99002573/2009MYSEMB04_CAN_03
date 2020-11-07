@@ -1,5 +1,5 @@
-# Uplaoded Files
+# Uploaded Files
 
-CAN Simulation file
-Test script file
-Panel files
+### CAN Simulation file
+### Test script file
+### Panel files
