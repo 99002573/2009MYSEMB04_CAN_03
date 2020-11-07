@@ -23,9 +23,7 @@
 |T11_L_14|  When animal crossing button is pressed speed limit should be limit to 10Km/hr and gear 2 till 1km | Ignition ON and TSI Feature ON  | Animal Crossing Sign | Speed: 0 – 10 kmph for 1 km Gear: 2 | As expected |
 |T11_L_15|  When Traffic signal button is pressed speed should gradually decrease to 0Km/hr | Ignition ON and TSI Feature ON  | Traffic Signal Sign | Speed: 0 kmph Gear: 0 | As expected |
 |T11_L_16|  When Fuel is in reserve and when filling station button is pressed vehicle should stop and fuel tank will be filled | Ignition ON and TSI Feature ON | Fuel Station Sign | Speed: 0 kmph Gear: 3 | As expected |
-|T11_L_17|  When T-junction button is pressed speed should gradually decrease to 0 km/hr | Ignition ON and TSI Feature ON  | T-Junction Sign | Speed: 0 kmph 
-Gear: 0 | As expected |
+|T11_L_17|  When T-junction button is pressed speed should gradually decrease to 0 km/hr | Ignition ON and TSI Feature ON  | T-Junction Sign | Speed: 0 kmph Gear: 0 | As expected |
 |T11_L_18|  When Slippery road button is pressed speed should limit to 50km/hr and gear 3 | Ignition ON and TSI Feature ON  | Slippery Road Sign | Speed: 0 – 50 kmph Gear: 3 | As expected |
-|T11_L_19|  When Road Hump button is pressed speed should limit to 10km/hr and gear 1 | Ignition ON and TSI Feature ON  | Road Hump | Speed: 0 – 10 kmph 
-Gear: 1 | As expected |
+|T11_L_19|  When Road Hump button is pressed speed should limit to 10km/hr and gear 1 | Ignition ON and TSI Feature ON  | Road Hump | Speed: 0 – 10 kmph Gear: 1 | As expected |
 |T11_L_20|  When Y-junction button is pressed speed should gradually decrease to 0km/hr | Ignition ON and TSI Feature ON  | Y-Junction Sign | Speed: 0 kmph Gear: 0 | As expected |
