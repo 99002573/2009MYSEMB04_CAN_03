@@ -15,6 +15,7 @@ variables
   
 }
 
+// System variable definition for Ignition
 on sysvar ENGINE_CONTROL::StartStopButton
 {
   ECmsg.StartStop ^= 0x01;
@@ -37,6 +38,7 @@ on sysvar ENGINE_CONTROL::StartStopButton
   output(ECmsg);  
 }
 
+// System variable definition for Gear trackbar
 on sysvar ENGINE_CONTROL::GearTrackbar
 {
   if (button == 0x01)
@@ -47,6 +49,7 @@ on sysvar ENGINE_CONTROL::GearTrackbar
   }
 }
 
+// System variable definition for Accelerator trackbar
 on sysvar ENGINE_CONTROL::AcceleratorTrackbar
 {
   if (button == 0x01)
@@ -132,6 +135,7 @@ on sysvar ENGINE_CONTROL::FillFuelButton
    putValue(SignDisplay, "");
 }
 
+// Setting values for speed, gear, and distance
 void SetValues(char Sign[], int SpeedSetting, int GearSetting, float DistanceSetting)
 {
     putValue(SignDisplay, Sign);
@@ -140,110 +144,110 @@ void SetValues(char Sign[], int SpeedSetting, int GearSetting, float DistanceSet
     SetDistance = DistanceSetting;
     SignButton = 1;   
 }
-
-on sysvar TRAFFIC_SIGNS::TurnLeft
+	
+on sysvar TRAFFIC_SIGNS::TurnLeft		//When a TurnLeft signboard is called
 {
-  if (button == 0x01)
+  if (button == 0x01)				//Checks whether ignition is on
   {
     @ENGINE_CONTROL::LeftIndicator = 1;
-    SetValues("Turn Left", 20, 1, 0.5);
-    TempDistance = @ENGINE_CONTROL::Distance;
-    setTimer(delay,10);
+    SetValues("Turn Left", 20, 1, 0.5);	//Send TurnLeft warning to the dashboard in the form of text, reduce the speed to 20 gear to 1 and set distance to 0.5km
+    TempDistance = @ENGINE_CONTROL::Distance; //Read the current value of distance measured in the odometer and store it in a variable
+    setTimer(delay,10);		//Set a delay of 10 milliseconds between each measurement
   }
 }
 
-on sysvar TRAFFIC_SIGNS::TurnRight
+on sysvar TRAFFIC_SIGNS::TurnRight		//When a TurnRight signboard is called
 {
-  if (button == 0x01)
+  if (button == 0x01)				//Checks whether ignition is on
   {
     @ENGINE_CONTROL::Rightindicator = 1;
-    SetValues("Turn Right", 15, 1, 0.5);
-    TempDistance = @ENGINE_CONTROL::Distance;
-    setTimer(delay,10);
+    SetValues("Turn Right", 15, 1, 0.5);	//Send TurnRight warning to the dashboard in the form of text, reduce the speed to 15 gear to 1 and set distance to 0.5km
+    TempDistance = @ENGINE_CONTROL::Distance; //Read the current value of distance measured in the odometer and store it in a variable
+    setTimer(delay,10);		//Set a delay of 10 milliseconds between each measurement
   }
 }
 
-on sysvar TRAFFIC_SIGNS::AnimalCrossing
+on sysvar TRAFFIC_SIGNS::AnimalCrossing		//When a AnimalCrossing signboard is called
 {
-  if (button == 0x01)
-  {
-    SetValues("Animal Crossing. Speed Limit: 30 Km/hr", 30, 2, 1.5);
-    TempDistance = @ENGINE_CONTROL::Distance;
-    setTimer(delay,10);
+  if (button == 0x01)				//Checks whether ignition is on
+  {	
+    SetValues("Animal Crossing. Speed Limit: 30 Km/hr", 30, 2, 1.5);	//Send AnimalCrossing warning to the dashboard in the form of text, reduce the speed to 30, gear to 2 and set distance to 1.5km
+    TempDistance = @ENGINE_CONTROL::Distance; //Read the current value of distance measured in the odometer and store it in a variable
+    setTimer(delay,10);		//Set a delay of 10 milliseconds between each measurement
   }
 }
 
-on sysvar TRAFFIC_SIGNS::FuelStation
+on sysvar TRAFFIC_SIGNS::FuelStation		//When a FuelStation signboard is called
 {
-  if (button == 0x01)
+  if (button == 0x01)				//Checks whether ignition is on
   {
     if (@ENGINE_CONTROL::FuelLED == 1) 
     {
-      SetValues("Fill Fuel", 0, 0, 0);
-      setTimer(delay,10);
+      SetValues("Fill Fuel", 0, 0, 0);	//Send FuelStation warning to the dashboard in the form of text, reduce the speed to 0, gear to 0 and set distance to 0km	
+      setTimer(delay,10);		//Set a delay of 10 milliseconds between each measurement
     }
   }
 }
 
-on sysvar TRAFFIC_SIGNS::TrafficSignal
+on sysvar TRAFFIC_SIGNS::TrafficSignal		//When a TrafficSignal signboard is called
 {
-  if (button == 0x01)
+  if (button == 0x01)				//Checks whether ignition is on
   {
-    SetValues("Traffic Signal Ahead", 0, 0, 0);
-    TempDistance = @ENGINE_CONTROL::Distance;
-    setTimer(delay,10);
+    SetValues("Traffic Signal Ahead", 0, 0, 0);		//Send TrafficSignal warning to the dashboard in the form of text, reduce the speed to 0, gear to 0 and set distance to 0 km
+    TempDistance = @ENGINE_CONTROL::Distance; //Read the current value of distance measured in the odometer and store it in a variable
+    setTimer(delay,10);		//Set a delay of 10 milliseconds between each measurement
   }
 }
 
-on sysvar TRAFFIC_SIGNS::SchoolZone
+on sysvar TRAFFIC_SIGNS::SchoolZone		//When a SchoolZone signboard is called
 {
-  if (button == 0x01)
+  if (button == 0x01)				//Checks whether ignition is on
   {
-    SetValues("School Zone. Speed Limit: 40 Km/hr", 40, 3, 0.5);
-    TempDistance = @ENGINE_CONTROL::Distance;
-    setTimer(delay,10);
-  }
-  
-}
-
-on sysvar TRAFFIC_SIGNS::SpeedLimit50
-{
-  if (button == 0x01)
-  {
-    SetValues("Speed Limit: 50 Km/hr", 50, 3, 1);
-    TempDistance = @ENGINE_CONTROL::Distance;
-    setTimer(delay,10);
+    SetValues("School Zone. Speed Limit: 40 Km/hr", 40, 3, 0.5);	//Send SchoolZone warning to the dashboard in the form of text, reduce the speed to 40 gear to 3 and set distance to 0.5km
+    TempDistance = @ENGINE_CONTROL::Distance; //Read the current value of distance measured in the odometer and store it in a variable
+    setTimer(delay,10);		//Set a delay of 10 milliseconds between each measurement
   }
   
 }
 
-on sysvar TRAFFIC_SIGNS::SpeedLimit100
+on sysvar TRAFFIC_SIGNS::SpeedLimit50		//When a SpeedLimit50 signboard is called
 {
-  if (button == 0x01)
+  if (button == 0x01)				//Checks whether ignition is on
   {
-    SetValues("Speed Limit: 100 Km/hr", 100, 4, 1.5);
-    TempDistance = @ENGINE_CONTROL::Distance;
-    setTimer(delay,10);
+    SetValues("Speed Limit: 50 Km/hr", 50, 3, 1);	//Send SpeedLimit50 warning to the dashboard in the form of text, reduce the speed to 50 gear to 3 and set distance to 1 km
+    TempDistance = @ENGINE_CONTROL::Distance; //Read the current value of distance measured in the odometer and store it in a variable
+    setTimer(delay,10);		//Set a delay of 10 milliseconds between each measurement
+  }
+  
+}
+
+on sysvar TRAFFIC_SIGNS::SpeedLimit100		//When a SpeedLimit100 signboard is called
+{
+  if (button == 0x01)				//Checks whether ignition is on
+  {
+    SetValues("Speed Limit: 100 Km/hr", 100, 4, 1.5);	//Send SpeedLimit100 warning to the dashboard in the form of text, reduce the speed to 100gear to 1 and set distance to 1.5km
+    TempDistance = @ENGINE_CONTROL::Distance; //Read the current value of distance measured in the odometer and store it in a variable
+    setTimer(delay,10);	//Set a delay of 10 milliseconds between each measurement
   }  
 }
 
-on sysvar TRAFFIC_SIGNS::Gravel
+on sysvar TRAFFIC_SIGNS::Gravel		//When a Gravel signboard is called
 {
-  if (button == 0x01)
+  if (button == 0x01)			//Checks whether ignition is on
   {
-    SetValues("Gravel Zone. Speed Limit: 10 Km/hr", 10, 1, 0.5);
-    TempDistance = @ENGINE_CONTROL::Distance;
-    setTimer(delay,10);
+    SetValues("Gravel Zone. Speed Limit: 10 Km/hr", 10, 1, 0.5);	//Send Gravel warning to the dashboard in the form of text, reduce the speed to 10 gear to 1 and set distance to 0.5m
+    TempDistance = @ENGINE_CONTROL::Distance; //Read the current value of distance measured in the odometer and store it in a variable
+    setTimer(delay,10);	//Set a delay of 10 milliseconds between each measurement
   }  
 }
 
-on sysvar TRAFFIC_SIGNS::NarrowBridge
+on sysvar TRAFFIC_SIGNS::NarrowBridge				//When a NarrowBridge signboard is called
 {
-  if (button == 0x01)
+  if (button == 0x01)							//Checks whether ignition is on
   {
-    SetValues("Narrow Bridge Ahead", 30, 2, 1);
-    TempDistance = @ENGINE_CONTROL::Distance;
-    setTimer(delay,10);
+    SetValues("Narrow Bridge Ahead", 30, 2, 1);			//Send NarrowBridge warning to the dashboard in the form of text, reduce the speed to 30, gear to 1 and set distance to 1 km
+    TempDistance = @ENGINE_CONTROL::Distance;	//Read the current value of distance measured in the odometer and store it in a variable
+    setTimer(delay,10);							//Set a delay of 10 milliseconds between each measurement
   }  
 }
 
