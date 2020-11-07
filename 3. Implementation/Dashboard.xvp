@@ -1,0 +1,165 @@
+<?xml version="1.0"?>
+<Panel Type="Vector.CANalyzer.Panels.PanelSerializer, Vector.CANalyzer.Panels.Serializer, Version=10.0.96.0, Culture=neutral, PublicKeyToken=null">
+  <Object Type="Vector.CANalyzer.Panels.Runtime.Panel, Vector.CANalyzer.Panels.Common, Version=10.0.96.0, Culture=neutral, PublicKeyToken=null" Name="Panel" Children="Controls" ControlName="Dashboard">
+    <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.96.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl4" Children="Controls" ControlName="Static Text 2">
+      <Property Name="Name">StaticTextControl4</Property>
+      <Property Name="Size">22, 13</Property>
+      <Property Name="Location">581, 467</Property>
+      <Property Name="BackColor">Black</Property>
+      <Property Name="Text">Km</Property>
+      <Property Name="ForeColor">DarkSlateBlue</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.TextBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.96.0, Culture=neutral, PublicKeyToken=null" Name="TextBoxControl1" Children="Controls" ControlName="Input/Output Box">
+      <Property Name="Name">TextBoxControl1</Property>
+      <Property Name="Size">339, 22</Property>
+      <Property Name="Location">230, 168</Property>
+      <Property Name="AlarmUpperTextColor">WindowText</Property>
+      <Property Name="BoxForeColor">Red</Property>
+      <Property Name="ValueDecimalPlaces">0</Property>
+      <Property Name="AlarmLowerBkgColor">Salmon</Property>
+      <Property Name="BoxTextAlign">Center</Property>
+      <Property Name="TextBackColor">Black</Property>
+      <Property Name="ValueDisplay">Text</Property>
+      <Property Name="AlarmUpperBkgColor">IndianRed</Property>
+      <Property Name="AlarmLowerTextColor">WindowText</Property>
+      <Property Name="AlarmGeneralSettings">1;0;0;100</Property>
+      <Property Name="DisplayLabel">Left</Property>
+      <Property Name="DescriptionText">SignDisplay:</Property>
+      <Property Name="BoxBorderStyle">None</Property>
+      <Property Name="BoxBackColor">Desktop</Property>
+      <Property Name="DescriptionSize">59, 18</Property>
+      <Property Name="SymbolConfiguration">5;1;DatabaseFile;;;SignDisplay;4;;;-1;;;</Property>
+      <Property Name="TabIndex">29</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.LCDControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.96.0, Culture=neutral, PublicKeyToken=null" Name="LCDControl4" ControlName="LCD Control 4">
+      <Property Name="Name">LCDControl4</Property>
+      <Property Name="Size">102, 27</Property>
+      <Property Name="Location">485, 453</Property>
+      <Property Name="NumberIntDigits">3</Property>
+      <Property Name="DecimalPlaces">2</Property>
+      <Property Name="ColorOn">SlateBlue</Property>
+      <Property Name="SymbolConfiguration">5;16;ENGINE_CONTROL;;;Distance;2;;;-1;;;</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.LEDControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.96.0, Culture=neutral, PublicKeyToken=null" Name="LEDControl3" ControlName="LED Control 2">
+      <Property Name="Name">LEDControl3</Property>
+      <Property Name="Size">26, 28</Property>
+      <Property Name="Location">554, 201</Property>
+      <Property Name="UsedLEDColorOn">Lime</Property>
+      <Property Name="UsedLEDColorOff">Gray</Property>
+      <Property Name="LEDStyle">TriangleRight</Property>
+      <Property Name="SymbolConfiguration">5;16;ENGINE_CONTROL;;;Rightindicator;1;;;-1;;;</Property>
+      <Property Name="TabIndex">15</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.LEDControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.96.0, Culture=neutral, PublicKeyToken=null" Name="LEDControl2" ControlName="LED Control 2">
+      <Property Name="Name">LEDControl2</Property>
+      <Property Name="Size">26, 28</Property>
+      <Property Name="Location">273, 201</Property>
+      <Property Name="UsedLEDColorOn">Lime</Property>
+      <Property Name="UsedLEDColorOff">Gray</Property>
+      <Property Name="LEDStyle">TriangleLeft</Property>
+      <Property Name="SymbolConfiguration">5;16;ENGINE_CONTROL;;;LeftIndicator;1;;;-1;;;</Property>
+      <Property Name="TabIndex">14</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.96.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl3" Children="Controls" ControlName="Static Text 2">
+      <Property Name="Name">StaticTextControl3</Property>
+      <Property Name="Size">30, 13</Property>
+      <Property Name="Location">573, 367</Property>
+      <Property Name="BackColor">Black</Property>
+      <Property Name="Text">KmHr</Property>
+      <Property Name="ForeColor">DarkSlateBlue</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.96.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl2" Children="Controls" ControlName="Static Text">
+      <Property Name="Name">StaticTextControl2</Property>
+      <Property Name="Size">13, 13</Property>
+      <Property Name="Location">742, 386</Property>
+      <Property Name="BackColor">Black</Property>
+      <Property Name="TextAlign">TopRight</Property>
+      <Property Name="Text">F</Property>
+      <Property Name="ForeColor">Blue</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.96.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl1" Children="Controls" ControlName="Static Text">
+      <Property Name="Name">StaticTextControl1</Property>
+      <Property Name="Size">14, 13</Property>
+      <Property Name="Location">742, 491</Property>
+      <Property Name="BackColor">Black</Property>
+      <Property Name="TextAlign">TopRight</Property>
+      <Property Name="Text">E</Property>
+      <Property Name="ForeColor">Red</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.LCDControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.96.0, Culture=neutral, PublicKeyToken=null" Name="LCDControl2" ControlName="LCD Control 2">
+      <Property Name="Name">LCDControl2</Property>
+      <Property Name="Size">79, 27</Property>
+      <Property Name="Location">507, 354</Property>
+      <Property Name="NumberIntDigits">3</Property>
+      <Property Name="DecimalPlaces">0</Property>
+      <Property Name="ColorOn">SlateBlue</Property>
+      <Property Name="SymbolConfiguration">5;16;ENGINE_CONTROL;;;SpeedGauge;1;;;-1;;;</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.LEDControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.96.0, Culture=neutral, PublicKeyToken=null" Name="LEDControl1" ControlName="LED Control">
+      <Property Name="Name">LEDControl1</Property>
+      <Property Name="Size">20, 22</Property>
+      <Property Name="Location">719, 323</Property>
+      <Property Name="UsedLEDColorOff">Gray</Property>
+      <Property Name="SymbolConfiguration">5;16;ENGINE_CONTROL;;;FuelLED;1;;;-1;;;</Property>
+      <Property Name="TabIndex">6</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.MeterControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.96.0, Culture=neutral, PublicKeyToken=null" Name="MeterControl4" ControlName="Meter 2">
+      <Property Name="Name">MeterControl4</Property>
+      <Property Name="Size">49, 69</Property>
+      <Property Name="Location">79, 401</Property>
+      <Property Name="ScaleMax">5</Property>
+      <Property Name="SweepAngleFrom">-160</Property>
+      <Property Name="SweepAngleTo">-10</Property>
+      <Property Name="NeedleColor">Crimson</Property>
+      <Property Name="SymbolConfiguration">5;16;ENGINE_CONTROL;;;BrakeGauge;1;;;-1;;;</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.LCDControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.96.0, Culture=neutral, PublicKeyToken=null" Name="LCDControl1" ControlName="LCD Control">
+      <Property Name="Name">LCDControl1</Property>
+      <Property Name="Size">41, 34</Property>
+      <Property Name="Location">281, 453</Property>
+      <Property Name="NumberIntDigits">1</Property>
+      <Property Name="DecimalPlaces">0</Property>
+      <Property Name="ColorOn">SlateBlue</Property>
+      <Property Name="SymbolConfiguration">5;16;ENGINE_CONTROL;;;GearDisplay;1;;;-1;;;</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.MeterControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.96.0, Culture=neutral, PublicKeyToken=null" Name="MeterControl3" ControlName="Meter">
+      <Property Name="Name">MeterControl3</Property>
+      <Property Name="Size">78, 66</Property>
+      <Property Name="Location">701, 404</Property>
+      <Property Name="SweepAngleFrom">160</Property>
+      <Property Name="SweepAngleTo">20</Property>
+      <Property Name="NeedleShape">ClockFilled</Property>
+      <Property Name="SymbolConfiguration">5;16;ENGINE_CONTROL;;;FuelLevel;1;;;-1;;;</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.MeterControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.96.0, Culture=neutral, PublicKeyToken=null" Name="MeterControl2" ControlName="Meter">
+      <Property Name="Name">MeterControl2</Property>
+      <Property Name="Size">162, 128</Property>
+      <Property Name="Location">458, 341</Property>
+      <Property Name="ScaleMax">220</Property>
+      <Property Name="SweepAngleFrom">-125</Property>
+      <Property Name="NeedleColor">Blue</Property>
+      <Property Name="NeedleShape">TriangleWithPoint</Property>
+      <Property Name="SymbolConfiguration">5;16;ENGINE_CONTROL;;;SpeedGauge;1;;;-1;;;</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.MeterControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.96.0, Culture=neutral, PublicKeyToken=null" Name="MeterControl1" ControlName="Meter">
+      <Property Name="Name">MeterControl1</Property>
+      <Property Name="Size">225, 180</Property>
+      <Property Name="Location">189, 323</Property>
+      <Property Name="ScaleMax">8</Property>
+      <Property Name="SweepAngleFrom">-110</Property>
+      <Property Name="SweepAngleTo">65</Property>
+      <Property Name="NeedleColor">Blue</Property>
+      <Property Name="NeedleShape">TriangleWithPoint</Property>
+      <Property Name="SymbolConfiguration">5;16;ENGINE_CONTROL;;;AccGauge;1;;;-1;;;</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.PictureBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.96.0, Culture=neutral, PublicKeyToken=null" Name="PictureBoxControl1" ControlName="Picture Box">
+      <Property Name="Name">PictureBoxControl1</Property>
+      <Property Name="Size">860, 552</Property>
+      <Property Name="Location">-10, -13</Property>
+      <Property Name="ImageFile">..\..\Examples\Activity\Day_5\EngineControlFull\DashboardCombi.bmp</Property>
+    </Object>
+    <Property Name="Name">Panel</Property>
+    <Property Name="Size">856, 537</Property>
+    <Property Name="BackColor">White</Property>
+  </Object>
+</Panel>
