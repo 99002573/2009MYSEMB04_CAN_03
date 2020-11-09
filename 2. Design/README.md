@@ -1,2 +1,2 @@
 # Design
-Architecture of project denoted by UML structural and behavioral diagrams
+Architecture of project represented by UML structural and behavioral diagrams
