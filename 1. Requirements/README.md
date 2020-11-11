@@ -13,11 +13,11 @@
 # Low Level Requirements
 |ID|    DESCRIPTION|
 |---|---|
-|L_01|For gear 1, vehicle should move in speed 0-20 Kmph w.r.to. acceleration applied.|
-|L_02|For gear 2, vehicle should move in speed 0-50 Kmph w.r.to. acceleration applied.|
-|L_03|For gear 3, vehicle should move in speed 0-80 Kmph w.r.to. acceleration applied.|
-|L_04|For gear 4, vehicle should move in speed 0-140 Kmph w.r.to. acceleration applied.|
-|L_05|For gear 5, vehicle should move in speed 0-220 Kmph w.r.to. acceleration applied.|
+|L_01|For gear 1, vehicle should move in speed 0-20 Kmph w.r.to. acceleration applied|
+|L_02|For gear 2, vehicle should move in speed 0-50 Kmph w.r.to. acceleration applied|
+|L_03|For gear 3, vehicle should move in speed 0-80 Kmph w.r.to. acceleration applied|
+|L_04|For gear 4, vehicle should move in speed 0-140 Kmph w.r.to. acceleration applied|
+|L_05|For gear 5, vehicle should move in speed 0-220 Kmph w.r.to. acceleration applied|
 |L_06|Depending upon the brake level speed should decrease gradually.|
 |L_07|When School Zone button is pressed whatever maybe the speed, speed should limit to 40 Kmph and gear 3 till 500 meters.|
 |L_08|When speed limit 50 button is pressed speed should limit to 50 Kmph and gear 3 till 2 km.|
